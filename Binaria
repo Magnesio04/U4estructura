@@ -1,0 +1,20 @@
+def busqueda_binaria(arr, objetivo):
+    izquierda, derecha = 0, len(arr) - 1
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+        if arr[medio] == objetivo:
+            return medio
+        elif arr[medio] < objetivo:
+            izquierda = medio + 1
+        else:
+            derecha = medio - 1
+    return -1
+
+arr = [5, 7, 23, 32, 34, 62]
+objetivo = 23
+
+resultado = busqueda_binaria(arr, objetivo)
+if resultado != -1:
+    print(f"Elemento encontrado en el índice {resultado}")
+else:
+    print("Elemento no encontrado en el arreglo")

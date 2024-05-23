@@ -1,0 +1,12 @@
+def contar_frecuencias(arr):
+    frecuencias = {}
+    for num in arr:
+        if num in frecuencias:
+            frecuencias[num] += 1
+        else:
+            frecuencias[num] = 1
+    return frecuencias
+
+arr = [34, 7, 23, 34, 5, 7, 23, 23]
+frecuencias = contar_frecuencias(arr)
+print(frecuencias)

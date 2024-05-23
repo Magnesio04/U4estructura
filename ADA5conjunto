@@ -1,0 +1,9 @@
+def buscar_en_conjunto(arr, objetivo):
+    conjunto = set(arr)
+    return objetivo in conjunto
+
+arr = [34, 7, 23, 32, 5, 62]
+objetivo = 23
+
+resultado = buscar_en_conjunto(arr, objetivo)
+print(f"Elemento {'encontrado' if resultado else 'no encontrado'} en el arreglo")
